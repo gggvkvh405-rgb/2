@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "electron .",
+    "start": "node server/server.js",
     "serve": "node tools/serve.js",
     "serve:py": "python3 -m http.server 4173 --bind 0.0.0.0",
     "dist:win": "electron-builder --win nsis portable",
@@ -19,7 +19,10 @@
     "mobile:sync": "npx cap sync android",
     "mobile:open": "npx cap open android",
     "mobile:apk": "cd android && ./gradlew assembleDebug",
-    "mobile:aab": "cd android && ./gradlew bundleRelease"
+    "mobile:aab": "cd android && ./gradlew bundleRelease",
+    "start:desktop": "electron .",
+    "serve:app": "node tools/serve.js",
+    "test:server": "node tools/test-server.mjs"
   },
   "devDependencies": {
     "@capacitor/android": "^6.2.0",
@@ -39,14 +42,25 @@
     },
     "files": [
       "desktop/main.js",
+      "server/**/*",
       "app/**/*",
       "build/icon.png",
       "package.json"
     ],
     "win": {
       "target": [
-        { "target": "nsis", "arch": ["x64"] },
-        { "target": "portable", "arch": ["x64"] }
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
       ],
       "icon": "build/icon.ico",
       "artifactName": "ByAzen-Setup-${version}.${ext}"
@@ -63,16 +77,36 @@
       "uninstallerIcon": "build/icon.ico"
     },
     "mac": {
-      "target": ["dmg", "zip"],
+      "target": [
+        "dmg",
+        "zip"
+      ],
       "icon": "build/icon.png",
       "category": "public.app-category.social-networking",
       "artifactName": "ByAzen-${version}-${arch}.${ext}"
     },
     "linux": {
-      "target": ["AppImage", "deb"],
+      "target": [
+        "AppImage",
+        "deb"
+      ],
       "icon": "build/icon.png",
       "category": "Network",
       "artifactName": "ByAzen-${version}.${ext}"
-    }
+    },
+    "extraResources": [
+      {
+        "from": "server",
+        "to": "server",
+        "filter": [
+          "**/*",
+          "!data/**",
+          "!node_modules/**"
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
   }
 }

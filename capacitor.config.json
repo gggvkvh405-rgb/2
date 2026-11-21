@@ -10,7 +10,8 @@
     "webContentsDebuggingEnabled": false
   },
   "server": {
-    "androidScheme": "https"
+    "androidScheme": "https",
+    "cleartext": true
   },
   "plugins": {
     "SplashScreen": {

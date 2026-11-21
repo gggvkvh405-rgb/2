@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - run: npm ci || npm install
+      - run: npm install
       - run: npm run dist:win
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -27,6 +27,21 @@ jobs:
           path: |
             release/*.exe
           if-no-files-found: error
+
+  server:
+    name: Server image
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - name: Server smoke test
+        run: |
+          node server/server.js &
+          sleep 2
+          curl -fsS http://127.0.0.1:8080/api/health
 
   android:
     name: Android .apk

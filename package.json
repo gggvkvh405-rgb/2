@@ -1,0 +1,78 @@
+{
+  "name": "byazen",
+  "productName": "ByAzen",
+  "version": "1.0.0",
+  "description": "ByAzen — тишина между словами. Тёмный минималистичный мессенджер (PWA + Windows/macOS/Linux + Android).",
+  "main": "desktop/main.js",
+  "author": "ByAzen",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "serve": "node tools/serve.js",
+    "serve:py": "python3 -m http.server 4173 --bind 0.0.0.0",
+    "dist:win": "electron-builder --win nsis portable",
+    "dist:mac": "electron-builder --mac dmg zip",
+    "dist:linux": "electron-builder --linux AppImage deb",
+    "dist:all": "electron-builder -mwl",
+    "mobile:add": "npx cap add android",
+    "mobile:sync": "npx cap sync android",
+    "mobile:open": "npx cap open android",
+    "mobile:apk": "cd android && ./gradlew assembleDebug",
+    "mobile:aab": "cd android && ./gradlew bundleRelease"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^6.2.0",
+    "@capacitor/core": "^6.2.0",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "id.byazen.messenger",
+    "productName": "ByAzen",
+    "copyright": "ByAzen · quiet by design",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "desktop/main.js",
+      "app/**/*",
+      "build/icon.png",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        { "target": "nsis", "arch": ["x64"] },
+        { "target": "portable", "arch": ["x64"] }
+      ],
+      "icon": "build/icon.ico",
+      "artifactName": "ByAzen-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "ByAzen",
+      "uninstallDisplayName": "ByAzen ${version}",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico"
+    },
+    "mac": {
+      "target": ["dmg", "zip"],
+      "icon": "build/icon.png",
+      "category": "public.app-category.social-networking",
+      "artifactName": "ByAzen-${version}-${arch}.${ext}"
+    },
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "icon": "build/icon.png",
+      "category": "Network",
+      "artifactName": "ByAzen-${version}.${ext}"
+    }
+  }
+}

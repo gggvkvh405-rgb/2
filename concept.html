@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ByAzen — тишина между словами</title>
+<meta name="description" content="ByAzen — концепт минималистичного тёмного мессенджера: меньше интерфейса, больше разговора." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">
+      <span class="mark">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="ng" x1="6" y1="28" x2="26" y2="4" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#2E7BFF"/><stop offset="1" stop-color="#7CF2D4"/>
+            </linearGradient>
+          </defs>
+          <path d="M7 26 16 6l9 20" stroke="url(#ng)" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M11.4 20.2h9.2" stroke="url(#ng)" stroke-width="2.1" stroke-linecap="round"/>
+        </svg>
+      </span>
+      ByAzen
+    </a>
+    <nav class="nav-links">
+      <a href="#idea">Идея</a>
+      <a href="#screens">Экраны</a>
+      <a href="#identity">Айдентика</a>
+      <a href="#voice">Тон</a>
+      <a href="#mood">Атмосфера</a>
+    </nav>
+    <a href="#screens" class="nav-cta">Смотреть макеты</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-art" aria-hidden="true">
+    <img src="assets/hero-art.png" alt="" />
+  </div>
+
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="eyebrow">Концепт · 2026 · v1.0</p>
+      <h1>Тишина<br />между<br /><em>словами.</em></h1>
+      <p class="lead">
+        ByAzen — мессенджер, который не отвлекает. Тёмный по умолчанию,
+        спокойный по характеру и предельно честный: только люди, только
+        разговор, ничего лишнего на экране.
+      </p>
+      <div class="hero-actions">
+        <a href="#screens" class="btn btn-primary">
+          Смотреть экраны
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h9M8.5 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#idea" class="btn btn-ghost">Философия бренда</a>
+      </div>
+      <div class="hero-meta">
+        <span><i class="dot"></i> Сквозное шифрование</span>
+        <span>·</span>
+        <span>Тёмная тема по умолчанию</span>
+        <span>·</span>
+        <span>Ноль рекламы</span>
+      </div>
+    </div>
+
+    <div class="phone-stage">
+      <div class="phone-glow" aria-hidden="true"></div>
+      <div class="phone">
+        <div class="island" aria-hidden="true"></div>
+        <div class="screen">
+          <div class="status-bar">
+            <span>21:04</span>
+            <span class="icons" aria-hidden="true">
+              <i></i>
+            </span>
+          </div>
+
+          <div class="screens-stack">
+            <!-- screen 1: chats -->
+            <div class="app-screen is-active" data-screen="chats">
+              <div class="sc-head">
+                <div>
+                  <div class="sc-title">Чаты</div>
+                  <div class="sc-sub">4 круга · 12 человек</div>
+                </div>
+                <div class="avatar-btn">А</div>
+              </div>
+
+              <div class="search">
+                <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <circle cx="7" cy="7" r="4.6" stroke="currentColor" stroke-width="1.4"/>
+                  <path d="m10.6 10.6 3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                </svg>
+                Поиск по ByAzen
+              </div>
+
+              <div class="chat-list">
+                <div class="chat-item active">
+                  <div class="chat-ava a1 on">М</div>
+                  <div class="chat-body">
+                    <div class="chat-name">Мила К. <span class="lock">◆</span></div>
+                    <div class="chat-last">Смотри, какое утро за окном</div>
+                  </div>
+                  <div class="chat-meta">
+                    <span class="chat-time">21:04</span>
+                    <span class="unread">2</span>
+                  </div>
+                </div>
+
+                <div class="chat-item">
+                  <div class="chat-ava a2">Д</div>
+                  <div class="chat-body">
+                    <div class="chat-name">Дима Ковач</div>
+                    <div class="chat-last">Голосовое · 0:14</div>
+                  </div>
+                  <div class="chat-meta"><span class="chat-time">20:51</span></div>
+                </div>
+
+                <div class="chat-item">
+                  <div class="chat-ava a3">Л</div>
+                  <div class="chat-body">
+                    <div class="chat-name">Лена П.</div>
+                    <div class="chat-last">Хорошо, до завтра</div>
+                  </div>
+                  <div class="chat-meta">
+                    <span class="chat-time">19:32</span>
+                    <span class="silent">⌁</span>
+                  </div>
+                </div>
+
+                <div class="chat-item">
+                  <div class="chat-ava a4">К</div>
+                  <div class="chat-body">
+                    <div class="chat-name">Круг «Кухня»</div>
+                    <div class="chat-last"><b>Марк:</b> кто за пасту?</div>
+                  </div>
+                  <div class="chat-meta">
+                    <span class="chat-time">18:10</span>
+                    <span class="unread">3</span>
+                  </div>
+                </div>
+
+                <div class="chat-item">
+                  <div class="chat-ava a5">О</div>
+                  <div class="chat-body">
+                    <div class="chat-name">Оля С.</div>
+                    <div class="chat-last">Фотография</div>
+                  </div>
+                  <div class="chat-meta"><span class="chat-time">17:44</span></div>
+                </div>
+
+                <div class="chat-item">
+                  <div class="chat-ava a1">И</div>
+                  <div class="chat-body">
+                    <div class="chat-name">Илья</div>
+                    <div class="chat-last">Отправил(а) файл</div>
+                  </div>
+                  <div class="chat-meta"><span class="chat-time">вт</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- screen 2: dialog -->
+            <div class="app-screen" data-screen="dialog">
+              <div class="dlg-head">
+                <span class="back">‹</span>
+                <div class="dlg-ava a1">М</div>
+                <div>
+                  <div class="dlg-name">Мила К.</div>
+                  <div class="dlg-status"><i class="live"></i> в сети</div>
+                </div>
+                <div class="dlg-actions"><span>⌕</span><span>•••</span></div>
+              </div>
+
+              <div class="thread">
+                <div class="stamp">Сегодня</div>
+                <div class="bub in">Ты уже видел небо сегодня?<span class="t">21:01</span></div>
+                <div class="bub out">Нет. Покажи.<span class="t">21:02 ✓</span></div>
+                <div class="bub in" style="padding:0;overflow:hidden;background:none;border:0;">
+                  <img src="assets/hero-art.png" alt="" style="width:150px;height:98px;object-fit:cover;border-radius:12px;opacity:.9;" />
+                </div>
+                <div class="bub out">Это лучше любого фильтра.<span class="t">21:03 ✓</span></div>
+                <div class="bub ghost">Сквозное шифрование · ключи только у вас</div>
+                <div class="typing"><i></i><i></i><i></i></div>
+              </div>
+
+              <div class="composer">
+                <span>Сообщение</span>
+                <span class="send" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <!-- screen 3: profile -->
+            <div class="app-screen" data-screen="profile">
+              <div class="profile">
+                <div class="pf-top"><span>‹</span><span>Профиль</span><span>•••</span></div>
+                <div class="pf-ava">А</div>
+                <div class="pf-name">Артём К.</div>
+                <div class="pf-handle">@artem · byazen.id</div>
+                <p class="pf-quote">«Пишу редко. Читаю всё. Ценю, когда не торопят.»</p>
+
+                <div class="settings">
+                  <div class="set-row">
+                    <span class="ico">☾</span>
+                    <span class="lbl">Тихие часы</span>
+                    <span class="hint">23:00–08:00</span>
+                    <span class="switch on"></span>
+                  </div>
+                  <div class="set-row">
+                    <span class="ico">◆</span>
+                    <span class="lbl">Сквозное шифрование</span>
+                    <span class="switch on"></span>
+                  </div>
+                  <div class="set-row">
+                    <span class="ico">◐</span>
+                    <span class="lbl">Кто видит «был(а)»</span>
+                    <span class="hint">Никто</span>
+                  </div>
+                  <div class="set-row">
+                    <span class="ico">◯</span>
+                    <span class="lbl">Мой круг</span>
+                    <span class="hint">7 человек</span>
+                  </div>
+                  <div class="set-row">
+                    <span class="ico">✦</span>
+                    <span class="lbl">Оформление</span>
+                    <span class="hint">Aurora</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="screen-tabs" role="tablist" aria-label="Экраны приложения">
+      <button role="tab" aria-selected="true" data-target="chats">01 · Чаты</button>
+      <button role="tab" aria-selected="false" data-target="dialog">02 · Диалог</button>
+      <button role="tab" aria-selected="false" data-target="profile">03 · Профиль</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IDEA ============ -->
+<section class="block" id="idea">
+  <div class="wrap">
+    <div class="manifesto reveal">
+      <div>
+        <p class="eyebrow">01 — Идея</p>
+        <p class="manifesto-quote">
+          Мессенджеры стали шумом. <span>ByAzen возвращает разговору
+          его первоначальную форму: два человека, одно сообщение,
+          ни одного лишнего пикселя.</span>
+        </p>
+      </div>
+      <div class="manifesto-copy">
+        <p>
+          Мы проектировали ByAzen от обратного: сначала убрали всё, что
+          можно убрать, — и только потом начали добавлять. Никаких баннеров,
+          «историй», рекомендаций и бесконечных лент. Только диалоги,
+          небольшие круги близких людей и инструменты, которые исчезают,
+          когда не нужны.
+        </p>
+        <p>
+          Название читается мягко: <b>By Azen</b> — «через тишину».
+          Azen — слово-конструкт: в нём есть и «аз» (начало), и «zen» (покой).
+          Логотип повторяет эту мысль — «A» из двух линий, одна из которых
+          всегда чуть ярче другой.
+        </p>
+
+        <div class="principles">
+          <div class="principle">
+            <span class="num">01</span>
+            <div>
+              <h3>Меньше интерфейса — больше разговора</h3>
+              <p>Одна колонка, крупный текст, воздух. Всё, что не является сообщением, уходит в тень.</p>
+            </div>
+          </div>
+          <div class="principle">
+            <span class="num">02</span>
+            <div>
+              <h3>Ночь — основное состояние</h3>
+              <p>Тёмная тема не режим, а характер. Светлые оттенки используются как акцент, а не как фон.</p>
+            </div>
+          </div>
+          <div class="principle">
+            <span class="num">03</span>
+            <div>
+              <h3>Уважение к вниманию</h3>
+              <p>Тихие часы, отсутствие «был(а) онлайн», ручные уведомления. Тишина — функция, а не сбой.</p>
+            </div>
+          </div>
+          <div class="principle">
+            <span class="num">04</span>
+            <div>
+              <h3>Приватность без настроек</h3>
+              <p>Сквозное шифрование включено с первого запуска. Ключи живут на устройстве, а не у нас.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCREENS ============ -->
+<section class="block" id="screens" style="background:linear-gradient(180deg,transparent,rgba(15,18,23,.55) 40%,transparent);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">02 — Экраны</p>
+      <h2>Три экрана. Ноль лишних решений.</h2>
+      <p>
+        Основной сценарий ByAzen укладывается в три поверхности: список
+        разговоров, диалог и профиль. Каждая деталь — от толщины разделителя
+        до ритма анимации — подчинена одному правилу: не мешать.
+      </p>
+    </div>
+
+    <div class="screens-grid">
+      <article class="screen-card reveal">
+        <div class="view">
+          <div class="mini-head">
+            <span class="mini-title">Чаты</span>
+            <span class="mini-pill">тихие часы</span>
+          </div>
+          <div class="mini-list">
+            <div class="mini-row new">
+              <span class="mini-ava a1">М</span>
+              <div>
+                <div class="mini-name">Мила К.</div>
+                <div class="mini-msg">Смотри, какое утро за окном</div>
+              </div>
+              <span class="mini-time">21:04</span>
+            </div>
+            <div class="mini-row">
+              <span class="mini-ava a2">Д</span>
+              <div>
+                <div class="mini-name">Дима Ковач</div>
+                <div class="mini-msg">Голосовое · 0:14</div>
+              </div>
+              <span class="mini-time">20:51</span>
+            </div>
+            <div class="mini-row">
+              <span class="mini-ava a3">Л</span>
+              <div>
+                <div class="mini-name">Лена П.</div>
+                <div class="mini-msg">Хорошо, до завтра</div>
+              </div>
+              <span class="mini-time">19:32</span>
+            </div>
+            <div class="mini-row new">
+              <span class="mini-ava a4">К</span>
+              <div>
+                <div class="mini-name">Круг «Кухня»</div>
+                <div class="mini-msg">Марк: кто за пасту?</div>
+              </div>
+              <span class="mini-time">18:10</span>
+            </div>
+            <div class="mini-row">
+              <span class="mini-ava a5">О</span>
+              <div>
+                <div class="mini-name">Оля С.</div>
+                <div class="mini-msg">Фотография</div>
+              </div>
+              <span class="mini-time">17:44</span>
+            </div>
+            <div class="mini-row">
+              <span class="mini-ava a1">И</span>
+              <div>
+                <div class="mini-name">Илья</div>
+                <div class="mini-msg">Отправил(а) файл</div>
+              </div>
+              <span class="mini-time">вт</span>
+            </div>
+          </div>
+        </div>
+        <h3>Список разговоров</h3>
+        <p>Никаких вкладок и вкладок-в-вкладках. Аватары приглушены, непрочитанное — единственный по-настоящему яркий акцент.</p>
+      </article>
+
+      <article class="screen-card reveal" style="transition-delay:.08s">
+        <div class="view">
+          <div class="mini-head">
+            <span class="mini-title">‹ Мила К.</span>
+            <span class="mini-pill" style="color:#7CF2D4;border-color:rgba(124,242,212,.25)">E2EE</span>
+          </div>
+          <div class="mini-thread">
+            <div class="mini-bub in">Ты уже видел небо сегодня?</div>
+            <div class="mini-bub out">Нет. Покажи.</div>
+            <div class="mini-bub in" style="padding:0;overflow:hidden;background:none;">
+              <img src="assets/hero-art.png" alt="" style="width:130px;height:84px;object-fit:cover;border-radius:10px;opacity:.9;" />
+            </div>
+            <div class="mini-bub out">Это лучше любого фильтра.</div>
+            <div class="mini-bub dash">Сквозное шифрование · ключи только у вас</div>
+          </div>
+        </div>
+        <h3>Диалог</h3>
+        <p>Сообщения «дышат»: мягкие радиусы, тонкие тени, синий градиент только у ваших реплик. Служебные пометки — пунктиром.</p>
+      </article>
+
+      <article class="screen-card reveal" style="transition-delay:.16s">
+        <div class="view">
+          <div class="mini-head">
+            <span class="mini-title">Профиль</span>
+            <span class="mini-pill">вы</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;padding:6px 16px 0;">
+            <div class="pf-ava" style="width:54px;height:54px;font-size:18px;">А</div>
+            <div class="pf-name" style="font-size:14px;margin-top:12px;">Артём К.</div>
+            <div class="pf-handle">@artem · byazen.id</div>
+            <p class="pf-quote" style="font-size:9.5px;margin-top:8px;">«Пишу редко. Читаю всё.»</p>
+          </div>
+          <div class="settings" style="margin:14px 18px 0;">
+            <div class="set-row" style="padding:9px 0;font-size:10.5px;">
+              <span class="ico" style="width:19px;height:19px;font-size:9px;">☾</span>
+              <span class="lbl">Тихие часы</span>
+              <span class="switch on" style="width:26px;height:15px;"></span>
+            </div>
+            <div class="set-row" style="padding:9px 0;font-size:10.5px;">
+              <span class="ico" style="width:19px;height:19px;font-size:9px;">◆</span>
+              <span class="lbl">Шифрование</span>
+              <span class="switch on" style="width:26px;height:15px;"></span>
+            </div>
+            <div class="set-row" style="padding:9px 0;font-size:10.5px;">
+              <span class="ico" style="width:19px;height:19px;font-size:9px;">◯</span>
+              <span class="lbl">Мой круг</span>
+              <span class="hint" style="font-size:8.5px;">7 человек</span>
+            </div>
+            <div class="set-row" style="padding:9px 0;font-size:10.5px;">
+              <span class="ico" style="width:19px;height:19px;font-size:9px;">✦</span>
+              <span class="lbl">Оформление</span>
+              <span class="hint" style="font-size:8.5px;">Aurora</span>
+            </div>
+          </div>
+        </div>
+        <h3>Профиль</h3>
+        <p>Здесь живёт контроль: тихие часы, видимость, круг общения и тема. Настройки не кричат, а тихо объясняют.</p>
+      </article>
+    </div>
+
+    <div class="screens-grid" style="margin-top:26px;grid-template-columns:1fr;">
+      <article class="screen-card reveal">
+        <div class="view" style="height:auto;padding:6px 8px 18px;">
+          <div class="mini-head">
+            <span class="mini-title">Круги</span>
+            <span class="mini-pill">малые группы</span>
+          </div>
+          <div class="mini-circles">
+            <div class="circle-row">
+              <div class="circle-stack">
+                <span class="mini-ava a4">К</span><span class="mini-ava a2">М</span><span class="mini-ava a1">Л</span>
+              </div>
+              <div>
+                <div class="circle-t">Кухня</div>
+                <div class="circle-s">обсуждают ужин · 3 сообщения</div>
+              </div>
+              <span class="circle-count">7 чел.</span>
+            </div>
+            <div class="circle-row">
+              <div class="circle-stack">
+                <span class="mini-ava a3">Д</span><span class="mini-ava a5">О</span>
+              </div>
+              <div>
+                <div class="circle-t">Дорога</div>
+                <div class="circle-s">тихий круг · 2 человека</div>
+              </div>
+              <span class="circle-count">2 чел.</span>
+            </div>
+            <div class="circle-row">
+              <div class="circle-stack">
+                <span class="mini-ava a2">И</span><span class="mini-ava a4">С</span><span class="mini-ava a3">Р</span>
+              </div>
+              <div>
+                <div class="circle-t">Семья</div>
+                <div class="circle-s">только важное · 14 сообщений</div>
+              </div>
+              <span class="circle-count">6 чел.</span>
+            </div>
+          </div>
+        </div>
+        <h3>Круги вместо каналов</h3>
+        <p>Людей в ByAzen можно собрать в «круг» — маленькую закрытую группу без подписчиков, лайков и охватов. Максимум 20 человек, по приглашению. Круг «Кухня» звучит как жизнь, «канал» — как редакция.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IDENTITY ============ -->
+<section class="block" id="identity">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">03 — Айдентика</p>
+      <h2>Знак, цвет и воздух.</h2>
+      <p>Логотип — буква «A», собранная из двух линий разной яркости. Тёплый белый цвет, глубокая ночь и один акцент: синий, который на пике переходит в мяту.</p>
+    </div>
+
+    <div class="identity">
+      <div class="id-card reveal">
+        <span class="label">Логотип</span>
+        <div class="logo-lockup">
+          <div class="logo-tile">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="lg" x1="6" y1="28" x2="26" y2="4" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#2E7BFF"/><stop offset="1" stop-color="#7CF2D4"/>
+                </linearGradient>
+              </defs>
+              <path d="M7 26 16 6l9 20" stroke="url(#lg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11.4 20.2h9.2" stroke="url(#lg)" stroke-width="2.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="logo-word">
+            ByAzen
+            <small>quiet by design</small>
+          </div>
+        </div>
+        <p class="logo-note">
+          «A» строится из двух штрихов с зазором — пауза внутри буквы.
+          Знак живёт на тёмной плитке с мягким свечением и одинаково
+          читается в 16 и в 1024 px.
+        </p>
+
+        <div class="swatches">
+          <div class="swatch">
+            <div class="chip" style="background:#060709"></div>
+            <div class="meta"><b>Void</b><span>#060709</span></div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:#10131A"></div>
+            <div class="meta"><b>Graphite</b><span>#10131A</span></div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:#2E7BFF"></div>
+            <div class="meta"><b>Azure</b><span>#2E7BFF</span></div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:#7CF2D4"></div>
+            <div class="meta"><b>Mint</b><span>#7CF2D4</span></div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:#F3F5F7"></div>
+            <div class="meta"><b>Paper</b><span>#F3F5F7</span></div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:#8B929C"></div>
+            <div class="meta"><b>Fog</b><span>#8B929C</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="id-card reveal" style="transition-delay:.08s">
+        <span class="label">Типографика</span>
+        <div class="type-sample">
+          <div class="big">Aa Бб 0123</div>
+          <p class="mid">Inter · лёгкий, но уверенный</p>
+          <p class="mono">JetBrains Mono · служебный голос</p>
+        </div>
+        <div style="margin-top:26px;">
+          <div class="type-rule"><b>Inter Display / 600</b><span>Заголовки · −4.5% трекинг</span></div>
+          <div class="type-rule"><b>Inter / 400</b><span>Текст · 1.6 интерлиньяж</span></div>
+          <div class="type-rule"><b>JetBrains Mono / 400</b><span>Метки, время, статусы</span></div>
+        </div>
+        <p class="logo-note" style="margin-top:22px;">
+          Правило: одна мысль — один размер. В интерфейсе не больше трёх
+          кеглей одновременно, а цвет текста — не ярче #F3F5F7.
+        </p>
+        <div style="display:flex;gap:18px;align-items:center;margin-top:30px;padding-top:26px;border-top:1px solid var(--line);">
+          <img src="assets/app-icon.png" alt="Иконка приложения ByAzen" style="width:86px;height:86px;border-radius:22px;border:1px solid var(--line-strong);" />
+          <div>
+            <div style="font-size:13px;font-weight:500;margin-bottom:6px;">Иконка приложения</div>
+            <div style="font-size:12px;color:var(--fog);line-height:1.6;max-width:26ch;">Двойная «A» — эхо и ответ. Вложенный контур читается даже в строке уведомлений.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VOICE ============ -->
+<section class="block" id="voice" style="background:linear-gradient(180deg,transparent,rgba(15,18,23,.5) 40%,transparent);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">04 — Тон голоса</p>
+      <h2>Говорим тихо, но ясно.</h2>
+      <p>ByAzen не шутит ради шутки и не объясняет очевидное. Короткие фразы, никаких восклицательных знаков и «магии» в интерфейсе.</p>
+    </div>
+
+    <div class="voice-grid">
+      <div class="voice-card reveal">
+        <span class="tag">Так говорим</span>
+        <ul>
+          <li>«Тихие часы. До 08:00 ничего не потревожит.»</li>
+          <li>«Ключи только у вас. Мы не можем прочитать переписку.»</li>
+          <li>«Круг приглашает только своих.»</li>
+          <li>«Не доставлено. Попробуем ещё раз.»</li>
+        </ul>
+      </div>
+      <div class="voice-card reveal" style="transition-delay:.08s">
+        <span class="tag">Так не говорим</span>
+        <ul>
+          <li>«Упс! Что-то пошло не так 😢»</li>
+          <li>«Ваша безопасность — наш главный приоритет!»</li>
+          <li>«Присоединяйтесь к миллионам пользователей»</li>
+          <li>«Настройте профиль, чтобы получать больше!»</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MOOD ============ -->
+<section class="block" id="mood">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">05 — Атмосфера</p>
+      <h2>Свет — это роскошь. Мы включаем его точечно.</h2>
+      <p>Фотография бренда — ночной город, синий экран, тихая комната. Ни одного стокового «человека с ноутбуком». Свет всегда исходит от устройства.</p>
+    </div>
+
+    <div class="mood-grid">
+      <div class="mood reveal">
+        <img src="assets/mood-1.png" alt="Руки держат телефон в тёмной комнате, экран светится синим" />
+        <span class="cap">Night light · hero</span>
+      </div>
+      <div class="mood reveal" style="transition-delay:.08s">
+        <img src="assets/mood-2.png" alt="Телефон на тёмном столе рядом с чашкой кофе" />
+        <span class="cap">Quiet objects · still</span>
+      </div>
+    </div>
+
+    <div class="roadmap" style="margin-top:80px;">
+      <div class="step reveal">
+        <span class="k">Этап 01</span>
+        <h4>Тишина</h4>
+        <p>MVP: чаты, сквозное шифрование, тёмная тема без переключателя, тихие часы.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:.08s">
+        <span class="k">Этап 02</span>
+        <h4>Круги</h4>
+        <p>Закрытые группы до 20 человек, общие фото и «медленные» реакции — без счётчиков.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:.16s">
+        <span class="k">Этап 03</span>
+        <h4>Пространство</h4>
+        <p>Голосовые комнаты на 40 минут, которые исчезают сами. Ничего не записывается.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-mark">
+        <div class="logo-tile">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="fg" x1="6" y1="28" x2="26" y2="4" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#2E7BFF"/><stop offset="1" stop-color="#7CF2D4"/>
+              </linearGradient>
+            </defs>
+            <path d="M7 26 16 6l9 20" stroke="url(#fg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11.4 20.2h9.2" stroke="url(#fg)" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        ByAzen
+      </div>
+      <p class="foot-note">
+        Концепт бренда и интерфейса. Не является официальным продуктом —
+        это дизайн-исследование о том, каким мог бы быть спокойный мессенджер.
+      </p>
+    </div>
+    <div class="foot-bottom">
+      <span>ByAzen · quiet by design</span>
+      <span>2026 · Aurora edition</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // nav blur
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // screen tabs
+  const tabs = document.querySelectorAll('.screen-tabs button');
+  const screens = document.querySelectorAll('.app-screen');
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach((t) => t.setAttribute('aria-selected', 'false'));
+      tab.setAttribute('aria-selected', 'true');
+      screens.forEach((s) =>
+        s.classList.toggle('is-active', s.dataset.screen === tab.dataset.target)
+      );
+    });
+  });
+
+  // reveal on scroll
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+  );
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+</script>
+</body>
+</html>
